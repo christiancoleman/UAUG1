@@ -1,0 +1,13 @@
+<aura:component description="RelatedContactsContainer"
+	controller="RelatedContactsAuraService"
+	access="global"
+	implements="flexipage:availableForAllPageTypes">
+
+	<aura:attribute name="limiter" type="Integer" default="10"/>
+	<aura:attribute name="contacts" type="Contact[]"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+	<c:ContactTable contacts="{!v.contacts}" />
+
+</aura:component>

@@ -1,0 +1,19 @@
+<aura:component description="AccountCard">
+
+	<aura:attribute name="account" type="Account"/>
+
+	<lightning:card >
+		<aura:set attribute="title">
+			<lightning:badge label="{!v.account.Name}" />
+		</aura:set>
+
+		<ui:outputText value="{!v.account.Type}" />
+		<ui:outputText value="{!v.account.Phone}" />
+		<ui:outputText value="{!v.account.BillingAddress.street}" />
+
+		<aura:set attribute="footer">
+			<ui:outputText value="{!v.account.Owner.Name}" />
+		</aura:set>
+	</lightning:card>
+
+</aura:component>

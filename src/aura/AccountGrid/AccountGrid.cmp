@@ -1,0 +1,13 @@
+<aura:component description="AccountGrid">
+
+	<aura:attribute name="accounts" type="Account[]"/>
+
+	<div class="slds-grid slds-wrap slds-grid_pull-padded">
+		<aura:iteration var="account" items="{!v.accounts}">
+
+			<div class="slds-small-size_1-of-1 slds-medium-size_1-of-3 slds-p-around_small">
+				<c:AccountCard account="{!account}" />
+			</div>
+		</aura:iteration>
+	</div>
+</aura:component>

@@ -1,0 +1,23 @@
+<aura:component description="ContactTable">
+
+	<aura:attribute name="contacts" type="Contact[]"/>
+
+	<!--<div class="slds-grid slds-wrap slds-grid_pull-padded">
+		<aura:iteration var="account" items="{!v.accounts}">
+
+			<div class="slds-small-size_1-of-1 slds-medium-size_1-of-3 slds-p-around_small">
+				<c:AccountCard account="{!account}" />
+			</div>
+		</aura:iteration>
+	</div>-->
+
+	<table class="slds-table slds-table_bordered slds-table_cell-buffer">
+		<aura:iteration var="contact" items="{!v.contacts}">
+
+			<div class="slds-small-size_1-of-1 slds-medium-size_1-of-3 slds-p-around_small">
+				<!--<c:ContactRow account="{!account}" />-->
+			</div>
+		</aura:iteration>
+	</table>
+
+</aura:component>
